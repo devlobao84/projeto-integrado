@@ -1,0 +1,309 @@
+.body {
+  display: block;
+  background-color: #F2F2F2;
+  min-height: 100vh;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1,
+p {
+  text-align: left;
+  padding-top: 5px;
+}
+
+h1 {
+  padding-top: 10%;
+}
+
+p {
+  font-size: 16px;  
+  margin-top: 10px;
+}
+
+.welcome {
+  display: block;
+  max-width: 125% !important;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.ilustra {
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+
+.cadastro {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.cadastro>span {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 10px 20px;
+}
+
+.div-form {
+  display: flex;
+  width: 5px;
+  height: 700px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3%;
+  border: 1px solid rgb(172, 172, 172);
+}
+
+.formulario {
+  margin-top: 10px;
+}
+
+.input-nome {
+  width: 90% !important;
+  text-align: left;
+}
+
+.input-sobrenome {
+  width: 90% !important;
+  text-align: left;
+}
+
+.small-nome {
+  width: 100% !important;
+  margin-top: 50px;
+  padding-right: 185px;
+  text-align: left;
+}
+
+.small-sobrenome {
+  width: 100% !important;
+  margin-top: 50px;
+  padding-right: 150px;
+  text-align: left;
+}
+
+.input-maior {
+  width: 80% !important;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.descricao {
+  font-size: 18px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px 0;  
+  padding: 0 0  50px 0;
+  width: 150px !important;
+}
+
+.logotipo {
+  display: flex;
+  justify-content: center;  
+  padding: 0 2px 50px;
+  width: 200px !important;
+  height: 120px !important;
+}
+
+.btn-create {
+  width: 80%;
+  margin: 3% 10% !important;
+}
+
+button>a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: left;
+}
+
+.endereço {
+  display: block;
+}
+
+/* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ */
+
+
+/*Responsividade Mobile*/
+
+@media(max-width: 500px) {
+  .body {
+    display: flex;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: 0;
+    border: none;
+  }  
+
+  h1.title-mob {
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+    width: 200px;
+    margin-left: -165px;
+  }
+
+   .mobile-p {
+    display: flex;
+    text-align: center;
+    width: 250px;
+    margin-left: -195px;
+    
+  } 
+
+
+   span.cad-mobile {
+     display: flex;
+     font-size: 1.1em;
+     text-align: center;
+     justify-content: center;
+     max-width: 100px !important;
+     margin-right: 235px;
+     padding-bottom: 5px;
+   }
+
+  
+  .mob-row {
+    display: flex;
+    justify-content: center;
+    padding-right: 225px;
+  }  
+
+  .div-res {
+    display: flex;
+    background-color: #F2F2F2;
+    max-width: 50%;
+    border-radius: 0;
+    border: none;
+  }
+
+ 
+
+  .ilustra {
+    display: none;
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
+  .input-nome {
+    display: block;
+    justify-content: center;
+    width: 150% !important;
+    margin: auto 100%;
+    text-align: left;
+  }
+
+  .input-sobrenome {
+    width: 90% !important;
+    text-align: left;
+  }
+
+  .logo-mob {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    padding: 10px 120px;
+    width: 200px !important;
+  }
+
+  .logotipo {
+    display: flex;
+    justify-content: center;    
+    padding: 5px 50px 20px 0;
+    width: 175px !important;
+    height: 100px !important;
+  }
+}
+
+/* /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ */
+
+
+/* Responsivo - Tablet */ 
+@media (max-width: 768px) {
+  .body {
+    display: flex;
+    background-color: #F2F2F2;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .div-res {
+    display: block;
+    background-color: #F2F2F2;
+    max-width: 20%;
+    border-radius: 0;
+    border: none;
+  }
+
+
+   .w_tab {
+     display: flex;
+     max-width: 50% !important;
+     padding-top: 10px;
+   }
+
+  h1.title-tablet {
+    font-size: 1.5em;
+    width: 150px;
+    margin-left: -80px;
+  }
+
+   .cad-tablet {
+     display: flex;
+     justify-content: center;
+     margin-left: 160px;
+     width: 350px;
+     padding-bottom: 5px;
+   }
+
+     p.p-tablet {
+     display: flex;
+     text-align: center;
+     font-size: 18px;
+     width: 260px;
+     margin-left: -200px;
+   }
+
+   .tables-row {
+     display: flex;
+     justify-content: center;
+     width: 650px;
+     padding-left: 50px;
+     
+   }
+
+   .ilustra {
+     display: none;
+   }
+}
+
+
+@media(max-width: 1366px) {
+    
+
+}
+
+
