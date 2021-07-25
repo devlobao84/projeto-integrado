@@ -141,10 +141,6 @@ button>a {
 
 @media(max-width: 500px) {
 
-  h1 {
-    margin-left: -135px;
-  }
-
   .body {
     display: flex;
     background-color: #F2F2F2;
@@ -167,15 +163,16 @@ button>a {
     margin-right: -100px;
   }
 
-    h1.title-mob {
+  h1.mob {
     display: flex;
-    text-align: left;
-    font-size: 1.2em;
-    width: 150px;
-    margin-left: -136px;
+    text-align: center;
+    font-size: 1.5em;
+    width: 200px;
+    margin-left: -165px;
+    
   }
 
-   .mobile-p {
+  .mobile-p {
     display: flex;
     text-align: center;
     width: 250px;
@@ -183,7 +180,7 @@ button>a {
     } 
 
 
-   span.cad-mobile {
+  span.cad-mobile {
      display: flex;
      font-size: 1.1em;
      text-align: center;
@@ -278,7 +275,7 @@ button>a {
     .tablet {
     font-size: 2.1em;
     width: 250px;
-    margin-left: -195px;
+    margin-left: -200px;
   }
 
    .cad-tablet {
