@@ -131,7 +131,7 @@ export default function Index() {
                   </div>
 
                   <div className="logo">
-                    <img src={logo} alt="logo do site" className="logotipo logo-mob logo-tab" />
+                    <img src={logo} alt="logo do site" className="logotipo branding-mob brand-tab" />
                   </div>
                 </div>
               </form>

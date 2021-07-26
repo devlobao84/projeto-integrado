@@ -55,11 +55,11 @@ button {
     padding: 0 50%;
   }
 
-    .mob {
+    h1.mobile {
       width: 500px;
       font-size: 1.3em;
       text-align: center;
-      margin-right: 20%;
+      margin-left: 10%;
       padding-top: 20%;
       padding-bottom: -10%;
     }
@@ -126,12 +126,12 @@ button {
     margin: 0  0 0 32px;
   }
   
-  .logo-res {
+  .logo-mob {
     display: flex;
     justify-content: center !important;
     padding: 10px 50px;
-    margin: 80% 50% 100% 50%;
-    width: 380px !important;
+    margin: 10% 50% 100% 50%;
+    width: 350px !important;
     height: 120px !important; 
   }
 }
@@ -176,10 +176,10 @@ button {
     padding-bottom: -10%;
   }*/
 
-    .title-tablet-login {
+    .ipad {
       font-size: 40px;
-      width: 250px;
-      margin-left: 100px;
+      width: 500px;
+      margin-left: 8%;
     }
 
     .taby{
@@ -221,6 +221,21 @@ button {
   .imput-table {
     width: 100% !important;
   }
+
+  .logo-pad {
+    display: flex;
+    width: 550px !important;
+    height: 85px;
+    justify-content: center !important;
+    padding: 10px 50px;
+    margin: 50% 0;
+    
+
+
+
+
+  }
+
 }
 
 

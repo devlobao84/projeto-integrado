@@ -227,11 +227,11 @@ button>a {
     text-align: left;
   }
 
-  .logo-mob {
+  .branding-mob {
     display: flex;
     justify-content: center;
-    margin-left: 50px;
-    padding: 10px 120px;
+    margin-left: 70px;
+    padding: 10px 150px;
     width: 200px !important;
   }
 
@@ -304,6 +304,16 @@ button>a {
 
    .ilustra {
      display: none;
+   }
+
+   .brand-tab {
+     display: flex;
+     justify-content: center;
+     margin: 20px;
+     width: 200%;
+     
+     
+
    }
 }
 
