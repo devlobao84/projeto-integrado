@@ -13,6 +13,9 @@ import './Dashboard.css'
 import { Link, useHistory } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import UserModal from '../../components/UserModal/UserModal'
+import 'bootstrap/js/dist/collapse'
+
+
 
 export default function Dashboard() {
   const [professional, setProfessional] = useState([])
@@ -50,7 +53,7 @@ export default function Dashboard() {
     setProfessional(content.allProfissionals)
   }
 
-  const handleDelete = async () =>  {
+  const handleDelete = async () => {
     const user = getCurrentUser()
     const tokenRes = await fetch(`http://localhost:5000/users`, {
       method: 'DELETE',
@@ -84,12 +87,11 @@ export default function Dashboard() {
     localStorage.removeItem('Token')
   }
 
-
   return (
-    <div className="body">
+    <div className="body pos-f-t ">
       <div className="container-fluid">
-        <div className="row  all-mobile">
-          <div className="col-xl-12  navProfile navMobile">
+        <div className=" row  all-mobile pos-f-t">
+          <div className="col-xl-12 bg-dark  navProfile navMobile cap">
             <img src={client2} alt="perfil" className="foto-perfil border-profile" />
             <div className="info-mobile col-sm-6 col-xl-12">
               <small className="boas-vindas bemvindo-mobile col-xs-2">Bem vindo(a)!</small>
@@ -97,31 +99,52 @@ export default function Dashboard() {
               <h2 className="cliente cliente-mobile col-sm-4 col-xs-2">{user.user}</h2>
               <p className="email">{user.email}</p>
 
-              <ul className="list-group">
-                <li className="nav-lista">
-                  <button className=" fa fa-home fa-fw  menu">Dashboard</button>
-                </li>
-                <li className="nav-lista">
-                  <button className=" fa fa-cog fa-fw  menu" onClick={() => setModalOpen(true)}>
-                    Alterar dados
-                  </button>{' '}
-                </li>
-                <li className="nav-lista">
-                  <button className=" fa fa-bell fa-fw  menu" onClick={() => handleDelete()}>
-                    Deletar Conta
+              {/* começa aqui */}
+
+              <div>
+                <nav className="flex-lg-column navbar navbar-expand-lg navbar-dark bg-dark box-nav">
+                  <button
+                    className="navbar-toggler meu-toggler buttom-resp"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false"
+                    aria-label="Alterna navegação"
+                  >
+                    <span className="navbar-toggler-icon"></span>
                   </button>
-                </li>
-              </ul>
-              <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
-              <div className="button-sair">
-                <button className="logout" onClick={logOut}>
-                  <Link to="/">
-                    <p>Sair</p>
-                  </Link>
-                </button>
+                  <div className="flex-lg-column collapse navbar-collapse open" id="navbarToggleExternalContent">
+                    <ul className="flex-lg-column list-group navbar-nav me-auto mb-2 mb-lg-0">
+                      <li className="nav-lista clikes">
+                        <button className=" fa fa-home fa-fw  menu ">Dashboard</button>
+                      </li>
+                      <li className="nav-lista nav-item">
+                        <button className="fa fa-cog fa-fw menu nav-link" onClick={() => setModalOpen(true)}>
+                          Alterar dados
+                        </button>{' '}
+                      </li>
+                      <li className="nav-lista nav-item">
+                        <button className=" fa fa-bell fa-fw  menu nav-link" onClick={() => handleDelete()}>
+                          Deletar Conta
+                        </button>
+                      </li>
+                      <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+                      <li className="button-sair nav-item">
+                        <button className="logout nav-link" onClick={logOut}>
+                          <Link to="/">
+                            <p>Sair</p>
+                          </Link>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
               </div>
             </div>
           </div>
+
+          {/* termina aqui */}
 
           <div className="col-xl-7 sm-6 px-lg-12 ">
             <div className="row barberInfo mobile-info">
@@ -158,7 +181,6 @@ export default function Dashboard() {
 
             {/*Profissionais*/}
 
-            
             <div className="row justify-content-around profissionais">
               {showInfo &&
                 professional.map((data, i) => {
@@ -317,7 +339,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    
     </div>
   )
 }

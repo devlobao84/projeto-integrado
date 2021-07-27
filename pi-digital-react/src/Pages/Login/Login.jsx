@@ -44,7 +44,7 @@ export default function Login() {
         <div className="row mob-row  tables-row">
           <div className="col-7">
             <div className="mob  table">
-              <h1 className="mob tablet-login">Seja bem-vindo!</h1>
+              <h1 className="mobile ipad">Seja bem-vindo!</h1>
             </div>
 
             <br></br>
@@ -87,7 +87,7 @@ export default function Login() {
                       Efetuar login
                     </button>
                     <div className="logo logo-index">
-                      <img src={logo} alt="logo do site" className="logotipo logo-res" />
+                      <img src={logo} alt="logo do site" className="logotipo logo-mob logo-pad" />
                     </div>
                   </div>
                 </div>

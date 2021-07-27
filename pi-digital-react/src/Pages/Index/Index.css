@@ -140,6 +140,7 @@ button>a {
 /*Responsividade Mobile*/
 
 @media(max-width: 500px) {
+
   .body {
     display: flex;
     background-color: #F2F2F2;
@@ -153,26 +154,33 @@ button>a {
     max-width: 20%;
     border-radius: 0;
     border: none;
-  }  
-
-  h1.title-mob {
-    display: flex;
-    text-align: center;
-    font-size: 25px;
-    width: 200px;
-    margin-left: -165px;
+  } 
+  
+  
+  .mob-wel {
+    max-width: 100% !important;
+    justify-content: center;
+    margin-right: -100px;
   }
 
-   .mobile-p {
+  h1.mob {
+    display: flex;
+    text-align: center;
+    font-size: 1.5em;
+    width: 200px;
+    margin-left: -165px;
+    
+  }
+
+  .mobile-p {
     display: flex;
     text-align: center;
     width: 250px;
-    margin-left: -195px;
-    
-  } 
+    margin-left: -50px;
+    } 
 
 
-   span.cad-mobile {
+  span.cad-mobile {
      display: flex;
      font-size: 1.1em;
      text-align: center;
@@ -195,9 +203,7 @@ button>a {
     max-width: 50%;
     border-radius: 0;
     border: none;
-  }
-
- 
+  } 
 
   .ilustra {
     display: none;
@@ -221,11 +227,11 @@ button>a {
     text-align: left;
   }
 
-  .logo-mob {
+  .branding-mob {
     display: flex;
     justify-content: center;
-    margin-left: 50px;
-    padding: 10px 120px;
+    margin-left: 70px;
+    padding: 10px 150px;
     width: 200px !important;
   }
 
@@ -243,6 +249,7 @@ button>a {
 
 /* Responsivo - Tablet */ 
 @media (max-width: 768px) {
+
   .body {
     display: flex;
     background-color: #F2F2F2;
@@ -265,10 +272,10 @@ button>a {
      padding-top: 10px;
    }
 
-  h1.title-tablet {
-    font-size: 1.5em;
-    width: 150px;
-    margin-left: -80px;
+    .tablet {
+    font-size: 2.1em;
+    width: 250px;
+    margin-left: -200px;
   }
 
    .cad-tablet {
@@ -297,6 +304,16 @@ button>a {
 
    .ilustra {
      display: none;
+   }
+
+   .brand-tab {
+     display: flex;
+     justify-content: center;
+     margin: 20px;
+     width: 200%;
+     
+     
+
    }
 }
 

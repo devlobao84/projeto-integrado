@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import ilustracao from '../../Assets/ilustracao.svg'
 import logo from '../../Assets/Logo.svg'
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom'
 import './Index.css'
 
 export default function Index() {
@@ -10,38 +10,36 @@ export default function Index() {
     sobrenome: '',
     email: '',
     senha: '',
-    confirmarSenha: ''
-  });
+    confirmarSenha: '',
+  })
 
-  let history = useHistory();
+  let history = useHistory()
 
-  function handleChange({target}) {
-      const {id, value } = target;
-      setForm({...form, [id]: value}) 
-  } 
+  function handleChange({ target }) {
+    const { id, value } = target
+    setForm({ ...form, [id]: value })
+  }
 
- async function userSubmit(e) {
-    e.preventDefault();
-     const response = await fetch('http://localhost:5000/users', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(form),
-      })
-   await response.json()
-   history.push('/login');
-    
- }
-
+  async function userSubmit(e) {
+    e.preventDefault()
+    const response = await fetch('http://localhost:5000/users', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(form),
+    })
+    await response.json()
+    history.push('/login')
+  }
 
   return (
     <div className="body">
       <div className="container">
-        <div className="row flex-wrap">
-          <div className="col-7  welcome">
-            <h1 className="title-mob title-tablet">Seja bem-vindo!</h1> <br />
+        <div className="row flex-wrap col-sm-12">
+          <div className="col-7 welcome mob-wel">
+            <h1 className="mob  tablet">Seja bem-vindo!</h1> <br />
             <p className="mobile-p p-tablet">
               Antes de tudo, efetue seu login. <br />
               Caso você ainda não possua um cadastro, pode criar um!
@@ -133,7 +131,7 @@ export default function Index() {
                   </div>
 
                   <div className="logo">
-                    <img src={logo} alt="logo do site" className="logotipo logo-mob logo-tab" />
+                    <img src={logo} alt="logo do site" className="logotipo branding-mob brand-tab" />
                   </div>
                 </div>
               </form>
