@@ -21,6 +21,7 @@ import EventsModal from '../../components/EventsModal/EventsModal'
 import UserModal from '../../components/UserModal/UserModal'
 import { Link, useHistory } from 'react-router-dom'
 import moment from 'moment'
+import 'bootstrap/js/dist/collapse'
 
 export default function Calendar() {
   const [modalOpen, setModalOpen] = useState()
@@ -80,45 +81,60 @@ export default function Calendar() {
     <div className="body">
       <div class="container-fluid">
         <div className="row all-mobile">
-          <div className="col-xl-12 navProfile navMobile">
+          <div className="col-xl-12 navProfile navMobile bg-dark">
             <img src={client2} alt="perfil" className="foto-perfil" />
             <div class="nav-info info-mobile ">
               <small class="boas-vindas bemvindo-mobile">Bem vindo(a)!</small>
               <h2 className="cliente cliente-mobile">{user.user}</h2>
               <p className="email">{user.email}</p>
-              <ul class="list-group">
-
-                <li className="nav-lista">
-                  <button className="buttonDash fa fa-home fa-fw  menu">Dashboard</button>
-                </li>
-                <li className="nav-lista">
-                  <button className=" fa fa-cog fa-fw  menu" onClick={() => setModalOpenUser(true)}>
-                    Alterar dados
-                  </button>{' '}
-                </li>
-                <li className="nav-lista">
-                  <button className=" fa fa-bell fa-fw  menu" onClick={handleDelete}>
-                    Deletar Conta
-                  </button>
-                </li>
-              </ul>
-              <UserModal isOpen={modalOpenUser} onClose={() => setModalOpenUser(false)} />
-              <div className="button-out">
-                <button className="logout" onClick={logOut}>
-                  <Link to="/">Sair</Link>
+              <nav className="flex-lg-column navbar navbar-expand-lg navbar-dark bg-dark">
+                <button
+                  className="navbar-toggler meu-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarToggleExternalContent"
+                  aria-controls="navbarToggleExternalContent"
+                  aria-expanded="false"
+                  aria-label="Alterna navegação"
+                >
+                  <span className="navbar-toggler-icon"></span>
                 </button>
-              </div>
+                <div className="flex-lg-column collapse navbar-collapse" id="navbarToggleExternalContent">
+                  <ul className="flex-lg-column list-group navbar-nav me-auto mb-2 mb-lg-0">
+                    <li className="nav-lista ">
+                      <button className=" fa fa-home fa-fw  menu ">Dashboard</button>
+                    </li>
+                    <li className="nav-lista nav-item">
+                      <button className="fa fa-cog fa-fw menu nav-link" onClick={() => setModalOpen(true)}>
+                        Alterar dados
+                      </button>{' '}
+                    </li>
+                    <li className="nav-lista nav-item">
+                      <button className=" fa fa-bell fa-fw  menu nav-link" onClick={() => handleDelete()}>
+                        Deletar Conta
+                      </button>
+                    </li>
+                    <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+                    <li className="button-sair nav-item">
+                      <button className="logout nav-link" onClick={logOut}>
+                        <Link to="/">
+                          <p>Sair</p>
+                        </Link>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             </div>
           </div>
 
           <div className="col-10 px-lg-4">
             <div className="row  carrousel">
               <div className="col carrousel-professional">
-                <img src={professionalDetails.avatar} alt='barberShop' class='profilePhoto'/>
+                <img src={professionalDetails.avatar} alt="barberShop" class="profilePhoto" />
                 <h4> {professionalDetails.nome}</h4>
                 <small className="especialidade">Especialista em {professionalDetails.servicos[0]}</small> <br></br>
                 <button type="button" className="confirma">
-
                   <a href="/login/dashboard/confirmed">Confirmar</a>
                 </button>
               </div>
@@ -141,7 +157,6 @@ export default function Calendar() {
                 <img src={imgCarrousel4} alt="carousel" class="carousel-img"></img>
                 <p className="specialty">Corte Complexo</p>
                 <small className="specification">Corte simples de cabelo com remoção total dos fios</small>
-
               </div>
             </div>
             <div className="row schedule-area">
@@ -165,7 +180,7 @@ export default function Calendar() {
                   isOpen={modalOpen}
                   onClose={() => setModalOpen(false)}
                   onEventAdded={(e) => onEventAdded(e)}
-                  setData={ e => setEvent(e)}
+                  setData={(e) => setEvent(e)}
                 />
               </div>
               <div className="col-4 agendamento agendamentoMobile">
