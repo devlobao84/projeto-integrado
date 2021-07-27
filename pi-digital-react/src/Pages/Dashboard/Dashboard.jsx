@@ -91,7 +91,7 @@ export default function Dashboard() {
     <div className="body pos-f-t ">
       <div className="container-fluid">
         <div className=" row  all-mobile pos-f-t">
-          <div className="col-xl-12 bg-dark  navProfile navMobile">
+          <div className="col-xl-12 bg-dark  navProfile navMobile cap">
             <img src={client2} alt="perfil" className="foto-perfil border-profile" />
             <div className="info-mobile col-sm-6 col-xl-12">
               <small className="boas-vindas bemvindo-mobile col-xs-2">Bem vindo(a)!</small>
@@ -102,9 +102,9 @@ export default function Dashboard() {
               {/* começa aqui */}
 
               <div>
-                <nav className="flex-lg-column navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav className="flex-lg-column navbar navbar-expand-lg navbar-dark bg-dark box-nav">
                   <button
-                    className="navbar-toggler meu-toggler"
+                    className="navbar-toggler meu-toggler buttom-resp"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarToggleExternalContent"
@@ -114,9 +114,9 @@ export default function Dashboard() {
                   >
                     <span className="navbar-toggler-icon"></span>
                   </button>
-                  <div className="flex-lg-column collapse navbar-collapse" id="navbarToggleExternalContent">
+                  <div className="flex-lg-column collapse navbar-collapse open" id="navbarToggleExternalContent">
                     <ul className="flex-lg-column list-group navbar-nav me-auto mb-2 mb-lg-0">
-                      <li className="nav-lista ">
+                      <li className="nav-lista clikes">
                         <button className=" fa fa-home fa-fw  menu ">Dashboard</button>
                       </li>
                       <li className="nav-lista nav-item">
