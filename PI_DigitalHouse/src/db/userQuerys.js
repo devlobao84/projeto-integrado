@@ -1,4 +1,6 @@
 const { Clientes } = require('../models');
+const _ = require ('lodash')
+
 
 
 const searchUsers = async (email) => await Clientes.findOne({
@@ -13,16 +15,16 @@ const deletar = async (id) => await Clientes.destroy({
     }
 });
 
-const update = async (params, userId) => await Clientes.update({
+
+const update = async (params, userId) => await Clientes.update(_.pickBy({
     nome: params.nome,
     sobrenome: params.sobrenome,
-    email: params.email 
-},
-    {
-        where: {
-            id: userId
-        }
-    });
+    email: params.email
+}, _.identity()), {
+    where: {
+        id: userId
+    }
+});
 
 
 
