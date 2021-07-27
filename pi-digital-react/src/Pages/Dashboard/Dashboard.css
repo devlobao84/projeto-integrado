@@ -389,8 +389,7 @@ li {
 
 /* Responsivo da Dash 01 */
 
-@media(max-width: 500px) {
-
+@media(max-width: 780px) {
 
 
   .navbar-toggler {
@@ -430,8 +429,7 @@ li {
      }
 
 
-     .info-mobile {
-      height: 50px;
+     .info-mobile {      
       padding-bottom: 20px;
      } 
 
